@@ -13,6 +13,8 @@ import os
 from dotenv import load_dotenv
 from prefect_sqlalchemy import SqlAlchemyConnector, ConnectionComponents, SyncDriver
 
+from utils.constants import SQLALCHEMY_BLOCK_NAME
+
 load_dotenv()
 
 
@@ -28,4 +30,4 @@ def create_sqlalchemy_connector_block():
         )
     )
 
-    connector.save('sqlalchemy-connector-block')
+    connector.save(SQLALCHEMY_BLOCK_NAME, overwrite=True)
