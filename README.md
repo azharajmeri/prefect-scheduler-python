@@ -47,4 +47,9 @@ Deployment.build_from_flow(
 ```
 
 ## Screenshots
-![Screenshot](path)
+![Screenshot](https://github.com/azharajmeri/prefect-scheduler-python/blob/main/screenshots/prefect_flows.jpg)
+![Screenshot](https://github.com/azharajmeri/prefect-scheduler-python/blob/main/screenshots/prefect_block.png)
+![Screenshot](https://github.com/azharajmeri/prefect-scheduler-python/blob/main/screenshots/prefect_flow.png)
+![Screenshot](https://github.com/azharajmeri/prefect-scheduler-python/blob/main/screenshots/prefect_schedule_flow.png)
+![Screenshot](https://github.com/azharajmeri/prefect-scheduler-python/blob/main/screenshots/prefect_deployments.png)
+![Screenshot](https://github.com/azharajmeri/prefect-scheduler-python/blob/main/screenshots/prefect_deployment_output.png)
