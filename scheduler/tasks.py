@@ -1,7 +1,7 @@
 from prefect import task, get_run_logger
 from prefect_sqlalchemy import SqlAlchemyConnector
 
-from utils.constants import SQLALCHEMY_BLOCK_NAME, INSERT_QUERY
+from utils.constants import SQLALCHEMY_BLOCK_NAME
 from utils.db_utils import create_table, insert_records
 from utils.yahoo_fin_utils import get_ticker_news_dict
 
@@ -16,11 +16,7 @@ def fetch_stock_news_task(ticker):
             return
         with SqlAlchemyConnector.load(SQLALCHEMY_BLOCK_NAME) as connector:
             create_table(connector)
-            # insert_records(connector, ticker_data)
-            connector.execute_many(
-                INSERT_QUERY,
-                seq_of_parameters=ticker_data,
-            )
+            insert_records(connector, ticker_data)
 
         logger.info(f"News records inserted successfully for ticker: {ticker}")
     except Exception as e:

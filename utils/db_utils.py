@@ -6,8 +6,6 @@ def create_table(connector):
 
 
 def insert_records(connector, records):
-    if not records:
-        return
     connector.execute_many(
         INSERT_QUERY,
         seq_of_parameters=records,

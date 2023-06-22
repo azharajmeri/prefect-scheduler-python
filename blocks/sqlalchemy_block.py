@@ -21,7 +21,7 @@ load_dotenv()
 def create_sqlalchemy_connector_block():
     connector = SqlAlchemyConnector(
         connection_info=ConnectionComponents(
-            driver=SyncDriver.MYSQL_MYSQLCONNECTOR,
+            driver=SyncDriver.MYSQL_PYMYSQL,
             username=os.getenv("DATABASE_USER"),
             password=os.getenv("DATABASE_PASSWORD"),
             host=os.getenv("DATABASE_HOST"),
